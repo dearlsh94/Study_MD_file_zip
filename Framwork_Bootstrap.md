@@ -33,7 +33,10 @@
 </html>
 ```
 
-
+- Using npm
+  - npm install bootstrap
+- Using Bower
+  - bower install bootstrap
 
 ## File Struct 
 

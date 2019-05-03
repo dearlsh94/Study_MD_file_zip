@@ -684,3 +684,13 @@ $(document).ready(function() {
 - row-border
 
 - stripe
+
+
+
+
+
+# Reference
+
+- [Datatables.net](https://datatables.net)
+
+  
