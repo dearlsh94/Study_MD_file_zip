@@ -18,7 +18,7 @@
 ## 설치
 
 ```
-$ npm i expo-cli --global
+$ npm i -g expo-cli
 ```
 
 ## Project 생성
@@ -34,6 +34,22 @@ $ expo start
     - 빈 상태 페이지 1개 존재
   - tabs
     - react-navigation을 통한 여러 페이지 존재
+
+## 추가 Library 설치
+
+- UI
+
+```
+$ yarn add native-base @expo/vector-icons
+```
+
+- Navigation
+
+```
+$ yarn add react-navigation
+```
+
+
 
 ## 시뮬레이터
 
@@ -52,3 +68,6 @@ $ expo start
 
 - react-native 개발 환경 설정하기 (expo)
   - https://hoony-gunputer.tistory.com/174
+
+- expot 공식문서
+  - https://docs.expo.io/versions/latest/introduction/installation/
