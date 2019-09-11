@@ -89,12 +89,19 @@ autorun( () => writer.get() ); // 다 observe 해준다!
 
 - 각 값에 MobX 함수를 적용시킬  때 사용한다.
 
+>- `get`
+>  - ES6 문법의 getter
+>  - 클래스 필드의 값 조작이 필요할 때 사용
+>  - 메소드 이름은 클래스 필드처럼 사용된다 -> 변수처럼 사용한다.
+>  - 반드시 리턴 값이 있어야 한다.
+
 ```
 import { decorate, observable, computed, autorun } from 'mobx';
 
 class ShoppingCart {
   item = [];
   
+  //getter
   get total() {
     console.log('Calculate....');
     return this.item.reduce( (prev, curr) => prev + curr.price, 0);
@@ -303,7 +310,7 @@ console.log(myShop.total);
   ```
   - 서버 재시작
 
-## with React
+## React와 함께
 
 ### React에 MobX 적용하기
 
@@ -500,6 +507,23 @@ registerServiceWorker();
   
   export default Counter;
   ```
+
+
+
+> **inject, observer 적용의 또 다른 예시**
+>
+> ```
+> const item = (num) => {
+>   console.log(num);
+>   return <div>{data1}</div>;
+> }
+> 
+> export default inject( ({counter}) => ({
+>   num: counter.number,
+> }))(observer(item));
+> ```
+
+
 
 ## MobX React 개발 도구 설치
 
