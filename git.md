@@ -158,12 +158,33 @@ $ git fetch
 $ git branch --set-upstream-to=[remotePath]/[branchName]
 ```
 
+## git ignore
+
+```
+# 확장자 .a인 모든 파일 무시
+*.a
+
+# lib.a는 무시하지 않음
+!lib.a
+
+# 현재 디렉토리의 TODO파일은 무시
+# subdir/TODO처럼 하위디렉토리에 있는 파일은 무시하지 않음
+/TODO
+
+# build/ 디렉토리에 있는 모든 파일은 무시
+build/
+
+# doc/notes.txt 파일은 무시하고 doc/server/arch.txt 파일은 무시하지 않음
+doc/*.txt
+
+# doc 디렉토리 아래의 모든 .pdf 파일을 무시
+doc/**/*.pdf
+```
+
 # 참고
 
-- [Git 개념] Git 주요 용어 및 구성
-  - https://victorydntmd.tistory.com/72
-- 깃(Git) 용어 정리
-  - https://tech.10000lab.xyz/git/important-git-terms.html
-- 자주 사용하는 기초 git 명령어 정리하기
-  - [https://medium.com/@pks2974/%EC%9E%90%EC%A3%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EA%B8%B0%EC%B4%88-git-%EB%AA%85%EB%A0%B9%EC%96%B4-%EC%A0%95%EB%A6%AC%ED%95%98%EA%B8%B0-533b3689db81](https://medium.com/@pks2974/자주-사용하는-기초-git-명령어-정리하기-533b3689db81)
+- [[Git 개념] Git 주요 용어 및 구성](https://victorydntmd.tistory.com/72)
+- [깃(Git) 용어 정리](https://tech.10000lab.xyz/git/important-git-terms.html)
+- [자주 사용하는 기초 git 명령어 정리하기](https://medium.com/@pks2974/%EC%9E%90%EC%A3%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EA%B8%B0%EC%B4%88-git-%EB%AA%85%EB%A0%B9%EC%96%B4-%EC%A0%95%EB%A6%AC%ED%95%98%EA%B8%B0-533b3689db81](https://medium.com/@pks2974/자주-사용하는-기초-git-명령어-정리하기-533b3689db81))
 
+- [Git의 기초 수정하고 저장소에 저장하기]([https://git-scm.com/book/ko/v2/Git%EC%9D%98-%EA%B8%B0%EC%B4%88-%EC%88%98%EC%A0%95%ED%95%98%EA%B3%A0-%EC%A0%80%EC%9E%A5%EC%86%8C%EC%97%90-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0](https://git-scm.com/book/ko/v2/Git의-기초-수정하고-저장소에-저장하기))
